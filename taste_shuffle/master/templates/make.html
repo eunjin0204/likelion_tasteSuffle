@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <title>Taste Shuffle</title>
+    <style>
+    
+        body{
+            font-family: Yeon Sung;
+            font-size : 30px;
+            text-align : center;
+            color:#4B4453;
+            background-color : #F3C5FF;
+        }
+        
+    </style> 
+</head>
+
+<body>
+<div class="container">
+<br>
+<p style="font-size:60px;">취 향 셔 플</p>
+<h1>방 만들기</h1>
+<br>
+<form action = "{% url 'create' %}" method="GET">
+    제목 : <input type = "text" name = "title"/><br>
+    팀 수 : <input type = "number" name = "team_number" style="width:50px;"/>
+    팀원 수 :<input type="number" name="per_team" style="width:50px;">
+    <select name="category">
+        <option value="food">음식</option>
+        <option value="movie">영화</option>
+        <option value="trip">여행지</option>
+        <option value="music">노래</option>
+    </select>
+    <br>
+    <input type = "submit" value = "만들기"/>
+</form>
+</div>
+</body>

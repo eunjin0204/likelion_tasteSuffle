@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <title>Taste Shuffle</title>
+    <style>
+    
+        body{
+            font-family: Yeon Sung;
+            font-size : 60px;
+            text-align : center;
+            color:#4B4453;
+            background-color : #F3C5FF;
+        }
+    </style> 
+</head>
+
+<body>
+<p>취 향 셔 플</p>
+
+<div class="container">
+    {% for rooms in room_list %}
+        <div class="alert alert-light" role="alert">
+            <h2>{{rooms.id}}번째 방</h2>
+            <h2><a href= "{% url 'roomDetail' rooms.id %}">{{rooms.title}}</a></h2>
+        </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

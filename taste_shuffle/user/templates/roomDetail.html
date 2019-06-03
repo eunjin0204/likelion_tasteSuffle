@@ -1,0 +1,226 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    .form-group{
+        margin-bottom: 15px;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+    .form-control{    
+        display: inline-block;
+        width: 30%;
+        height: 4em;
+        padding: 6px 12px;
+        font-size: 20px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #5f00ff;
+        border-radius: 20px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        text-align: center;
+    }
+    label {
+        display: contents;
+    }
+    .detail-css {
+        display: block;
+        text-align: center;
+        margin: 3em;
+    }
+    .detail-img{
+        display: inline-block;
+        text-align: center;
+        width: 20em;
+        height: 20em;
+        overflow: hidden;
+        max-width: 30%;
+    }
+    .detail-css > label > .detail-img > img {
+        height: 20em;
+        width: auto;
+        margin: 1em;
+    }
+
+    .input-css {
+        text-align: center;
+    }
+
+    .btn {
+        text-align: center;
+        display: inline-block;
+        width: 70%;
+        margin: 1em;
+        height: 5%;
+        border-radius: 20px;
+        border: 0;
+        background-color: antiquewhite;
+        font-size: 1.3em;
+    }
+</style>
+{% load staticfiles %}
+    <form action="{% url 'result' roomDetail.id %}">
+        <div class="detail-css">
+            {% if roomDetail.category == "food" %}
+            <input type="hidden" name="category" value="food">
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="1">
+                        <img src="{% static 'food/동남아식.jpg' %}" alt="">
+                    </div>
+                </label>
+                
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="2">
+                        <img src="{% static 'food/양식.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="3">
+                        <img src="{% static 'food/일식.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="4">
+                        <img src="{% static 'food/중식.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="5">
+                        <img src="{% static 'food/한식.jpg' %}" alt="">
+                    </div>
+                </label>
+                
+            {% elif roomDetail.category == "music" %}
+            <input type="hidden" name="category" value="music">
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="1">
+                        <img src="{% static 'music/댄스.jpg' %}" alt="">
+                    </div>
+                </label>
+                
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="2">
+                        <img src="{% static 'music/발라드.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="3">
+                        <img src="{% static 'music/클래식.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="4">
+                        <img src="{% static 'music/팝송.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="5">
+                        <img src="{% static 'music/힙합.jpg' %}" alt="">
+                    </div>
+                </label>
+            
+            {% elif roomDetail.category == "movie" %}
+            <input type="hidden" name="category" value="movie">
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="1">
+                        <img src="{% static 'movie/공포영화.jpg' %}" alt="">
+                    </div>
+                </label>
+                
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="2">
+                        <img src="{% static 'movie/로맨스.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="3">
+                        <img src="{% static 'movie/코미디.jpg' %}" alt="">
+                    </div>
+                </label>
+                <label>
+                        <input type="radio" name="test" value="4">
+                        <img src="{% static 'movie/판타지.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="5">
+                        <img style="width:200;" src="{% static 'movie/히어로물.jpg' %}" alt="">
+                    </div>
+                </label>
+                
+            {% else %}
+            <input type="hidden" name="category" value="tripsite">
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="1">
+                        <img src="{% static 'tripsite/아메리카.jpg' %}" alt="">
+                    </div>
+                </label>
+                
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="2">
+                        <img src="{% static 'tripsite/아시아.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="3">
+                        <img src="{% static 'tripsite/아프리카.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="4">
+                        <img src="{% static 'tripsite/오세아니아.jpg' %}" alt="">
+                    </div>
+                </label>
+
+                <label>
+                    <div class="detail-img">
+                        <input type="radio" name="test" value="5">
+                        <img src="{% static 'tripsite/유럽.jpg' %}" alt="">
+                    </div>
+                </label>
+            
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" name="username" value="이름을 입력하세요">
+            <!-- <input type = "submit" class="form-control" value = "제출하기"/> -->
+            <button type="submit" class="btn btn-default">제출하기</button>
+
+        </div>
+
+    </form>
