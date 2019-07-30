@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="C:\Users\ss\Desktop\해커톤\myvenv"
+$env:VIRTUAL_ENV="C:\Users\82103\Documents\카카오톡 받은 파일\해커톤\myvenv"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name

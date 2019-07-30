@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set "VIRTUAL_ENV=C:\Users\ss\Desktop\해커톤\myvenv"
+set "VIRTUAL_ENV=C:\Users\82103\Documents\카카오톡 받은 파일\해커톤\myvenv"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"
